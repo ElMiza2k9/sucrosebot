@@ -1,0 +1,16 @@
+const Discord = require("discord.js");
+
+module.exports = {
+    name: "",
+    alias: [""],
+
+    /**
+     * Esto para el intellisense (ctrl + espacio)
+     * @param {Discord.Client} client
+     * @param {import("discord-reply")} message
+     * @param {String[]} args
+     */
+    execute(client, message, args) {}
+};
+
+// pueden escribir "djs" en un archivo y les va a sugerir un snippet que escribirá esto automaticamente
