@@ -1,6 +1,6 @@
 const { Structure } = require("erela.js");
 
-Structure.extend(
+module.exports = Structure.extend(
     "Player",
     (Player) =>
         class extends Player {

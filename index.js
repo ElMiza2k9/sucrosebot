@@ -18,7 +18,7 @@ const prettyms = require("pretty-ms");
 client.lavasfy = new LavasfyClient(
     {
         clientID: "5f573c9620494bae87890c0f08a60293",
-        clientSecret: "212476d9b0f3472eaa762d90b19b0ba8", // este es mi token de spotify .-.
+        clientSecret: "212476d9b0f3472eaa762d90b19b0ba8", // al fin un buen token xd
         audioOnlyResults: true,
         useSpotifyMetadata: true,
         autoResolve: true
@@ -132,6 +132,8 @@ const sugerencias = fs.readdirSync("./comandos/sugerencias").filter((file) => fi
 
 const confesiones = fs.readdirSync("./comandos/confesiones").filter((file) => file.endsWith(".js"));
 
+const economia = fs.readdirSync("./comandos/economia").filter((file) => file.endsWith(".js"));
+
 
 for (const file of commandFiles) {
     const command = require(`./comandos/${file}`);
@@ -167,6 +169,11 @@ for (const file of sugerencias) {
 }
 for (const file of confesiones) {
     const command = require(`./comandos/confesiones/${file}`);
+    client.commands.set(command.name, command);
+}
+
+for (const file of economia) {
+    const command = require(`./comandos/economia/${file}`);
     client.commands.set(command.name, command);
 }
 

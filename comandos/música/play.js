@@ -53,17 +53,19 @@ module.exports = {
                     if (!player.playing && !player.paused && player.queue.totalSize === searched.tracks.length)
                         player.play();
 
-                    message.channel.send("<:spotify:884800485486379038> Se agregaron " + searched.tracks.length + " canciones.");
+                    message.channel.send("<:sp:892074109972922479> Se agregaron " + searched.tracks.length + " canciones.");
                 } else if (searched.loadType.startsWith("TRACK")) {
                     const cancion = searched.tracks[0];
                     player.queue.add(TrackUtils.build(searched.tracks[0], message.author));
+
+                    (searched.tracks[0])
 
                     if (!player.playing && !player.paused && !player.queue.size)
                         player.play(searched.tracks[0]);
 
                     message.channel.send("<:sp:892074109972922479> Se agregó " + cancion.info.title)
                 } else {
-                    console.log(searched)
+                    (searched)
                     return message.reply("no encontré resultados para tu petición.");
                 }
             } else {
