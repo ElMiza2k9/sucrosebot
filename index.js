@@ -197,4 +197,4 @@ client.discordTogether = new DiscordTogether(client);
 
 //------------------------ Token ------------------------//
 
-client.login("ODg3NzA2NzIzMjMyNjY5NzE3.YUIDTw.UytaA-Q4vq6lUOoRotpKqe1UCw8");
+client.login("");
